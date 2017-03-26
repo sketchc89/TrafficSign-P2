@@ -10,8 +10,8 @@ The purpose of this project is to create a classifier for traffic signs. The mod
 
 Four types of data augmentation were performed.
 1. Rotation to adjust for seeing signs at angles. Additional steps to augment data not performed here would be to warp images. ![Rotation](examples/rotation.png)
-2. Histogram equalization to increase contrast [Histogram Equalization](examples/histeq.png)
-3. Contrast limited histogram equalization to increase contrast with a larger kernel size [CLAHE](examples/clahe.png)
+2. Histogram equalization to increase contrast ![Histogram Equalization](examples/histeq.png)
+3. Contrast limited histogram equalization to increase contrast with a larger kernel size ![CLAHE](examples/clahe.png)
 
 ## Preprocessing
 
@@ -23,9 +23,8 @@ The model is based on VGG. It achieves an accuracy of 95% on the validation set.
 ![VGG Like Architecture](examples/Architecture.png)
 
 ## Train, Validate and Test the Model
-A validation set can be used to assess how well the model is performing. A low accuracy on the training and validation
-sets imply underfitting. A high accuracy on the training set but low accuracy on the validation set implies overfitting.
 
+An accuracy of 95% was achieved on the validation set (model 6) ![Accuracies](examples/accuracy.png) More models were trained with fewer epochs to test ensemble learning. One model didn't achieve the 93% accuracy after 500 epochs.
 1. Learning rate set to 1e-4. The learning rate of Adam decays over time and adjusts based on the gradient of the variables with momentum.
 2. Adam Optimizer adjusts the learning rate using the [Adam algorithm](https://arxiv.org/pdf/1412.6980v8.pdf) This optimizer is derived from Adagrad an adaptive learning algorithm. The algorithm monotonically reduces its learning rate over time. RMSProp improved on this by using a moving average of gradients to reduce the aggressiveness of Adagrad. Adam improved on RMSProp by adding momentum. The default momentum and decay rate are used from tensorflow.
 3. A batch size of 64 is a function of using a large VGG-like architecture and having an older GPU. The first LeNet-like architecture had a batch size of 512.
