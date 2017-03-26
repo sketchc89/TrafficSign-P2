@@ -31,7 +31,11 @@ The model is based on VGG. It achieves an accuracy of 95% on the validation set.
 
 ## Train, Validate and Test the Model
 
-An accuracy of 95% was achieved on the validation set (model 6) ![Accuracies](examples/accuracy.png) More models were trained with fewer epochs to test ensemble learning. One model didn't achieve the 93% accuracy after 500 epochs.
+An accuracy of 95% was achieved on the validation set (model 6) 
+
+![Accuracies](examples/accuracy.png) 
+
+More models were trained with fewer epochs to test ensemble learning. One model didn't achieve the 93% accuracy after 500 epochs.
 1. Learning rate set to 1e-4. The learning rate of Adam decays over time and adjusts based on the gradient of the variables with momentum.
 2. Adam Optimizer adjusts the learning rate using the [Adam algorithm](https://arxiv.org/pdf/1412.6980v8.pdf) This optimizer is derived from Adagrad an adaptive learning algorithm. The algorithm monotonically reduces its learning rate over time. RMSProp improved on this by using a moving average of gradients to reduce the aggressiveness of Adagrad. Adam improved on RMSProp by adding momentum. The default momentum and decay rate are used from tensorflow.
 3. A batch size of 64 is a function of using a large VGG-like architecture and having an older GPU. The first LeNet-like architecture had a batch size of 512.
