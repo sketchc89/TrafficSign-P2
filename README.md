@@ -23,6 +23,10 @@ Four types of data augmentation were performed.
 ## Preprocessing
 
 Images were converted to grayscale and normalized
+* Performed on training, validation and test data.
+* Grayscale images to reduce the number of parameters. 
+* [Sermanet Lecun 2011](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) found color didn't improve accuracy a lot. Prior models run with color agreed with this.
+* Data is normalized by subtracting the mean image and normalizing following [common best practices](http://cs231n.github.io/neural-networks-2/#datapre) in order to keep our features in a consistent range. This will reduce the likelihood of our gradients getting out of control through vanishing gradient / saturating neurons in the network
 
 ## Model Architecture
 
