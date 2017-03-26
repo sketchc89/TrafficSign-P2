@@ -9,11 +9,16 @@ The purpose of this project is to create a classifier for traffic signs. The mod
 ## Augmentation
 
 Four types of data augmentation were performed.
-1. Rotation to adjust for seeing signs at angles. Additional steps to augment data not performed here would be to warp images. ![Rotation](examples/rotation.png)
+1. Rotation to adjust for seeing signs at angles. Additional steps to augment data not performed here would be to warp images. 
+
+    ![Rotation](examples/rotation.png)
+
 2. Histogram equalization to increase contrast 
-![Histogram Equalization](examples/histeq.png)
+
+    ![Histogram Equalization](examples/histeq.png)
 3. Contrast limited histogram equalization to increase contrast with a larger kernel size 
-![CLAHE](examples/clahe.png)
+
+    ![CLAHE](examples/clahe.png)
 
 ## Preprocessing
 
