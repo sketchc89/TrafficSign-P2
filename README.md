@@ -47,4 +47,4 @@ Files
 ---
 [Traffic_Sign_Classifier.ipynb](Traffic_Sign_Classifier.ipynb) contains the entirety of the project. This includes data exploration, augmentation, and preprocessing as well as model training, testing, and explanations.
 
-
+All images placed in examples folder. CSV contain validation accuracy for each model.
